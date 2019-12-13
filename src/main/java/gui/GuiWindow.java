@@ -7,6 +7,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.AbstractButton;
 import javax.swing.BoxLayout;
 import java.awt.BorderLayout;
+import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
@@ -46,7 +47,12 @@ public class GuiWindow {
 	/**
 	 * A dictionary translating token names to strings
 	 */
-	static JSONObject shortNameDict; 
+	static JSONObject shortNameDict;
+	
+	/**
+	 * Location of the window on the screen.
+	 */
+	private static Point windowLocation;
 	
 	/**
 	 * Create new GUI window (a dialog box).
@@ -61,6 +67,9 @@ public class GuiWindow {
 		frame = new JDialog(parent, question);
 		frame.setModal(true);
 		frame.setSize(300, 300); // TODO: Choose window size
+		if (windowLocation != null) {
+			frame.setLocation(windowLocation);
+		}
 //		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // TODO: Set close operation
 		itemPane = new JPanel();
 		// Set the layout
@@ -121,6 +130,8 @@ public class GuiWindow {
 		JButton confirmButton = new JButton("Confirm");
 		confirmButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				// Save current location of the window
+				windowLocation = frame.getLocation();
 				frame.setVisible(false);
 			}
 		});
