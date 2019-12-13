@@ -71,7 +71,7 @@
             <artifactId>exec-maven-plugin</artifactId>
             <version>1.4.0</version>
             <configuration>
-              <mainClass>drools.DroolsTest</mainClass>
+              <mainClass>drools.DroolsRun</mainClass>
             </configuration>
           </plugin>           
         </plugins>
