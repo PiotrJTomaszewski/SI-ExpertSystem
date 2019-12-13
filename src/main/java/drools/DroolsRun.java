@@ -12,8 +12,8 @@ import gui.GuiWindow;
 
 public class DroolsRun {
 	public static final void main(String[] args) {
-		// Load json file
-		URL res = DroolsRun.class.getResource("/data/data.json");
+		// Load JSON file
+		URL res = DroolsRun.class.getResource("/data/QandA.json");
 		File json_file;
 		try {
 			json_file = Paths.get(res.toURI()).toFile();

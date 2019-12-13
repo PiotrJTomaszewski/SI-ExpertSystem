@@ -24,7 +24,7 @@ rule "Classic Fiction"
 		GuiWindow window;
 		JFrame mainFrame = new JFrame();
 		String question = "cla_fic";
-		String[] answer= {'yes', 'no'};
+		String[] answer = {'yes', 'no'};
 		window = new GuiWindow(mainFrame, question, answer);
 	    // System.out.println(window.getSelectedOption());
 		insert (new Answer(question, window.getSelectedOption()));
@@ -37,10 +37,20 @@ rule "High society"
 		GuiWindow window;
 		JFrame mainFrame = new JFrame();
 		String question = "hig_soc";
-		String[] answer= {'yes', 'no'};
+		String[] answer = {'yes', 'no'};
 		window = new GuiWindow(mainFrame, question, answer);
 		// System.out.println(window.getSelectedOption());
 		insert (new Answer(question, window.getSelectedOption()));		
 end
 		
-		
+rule "Social issues"
+	when
+		Answer(question == "hig_soc", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "soc_iss";
+		String[] answer = {"do_you_hav_any_clas", "rac_in_ame", "pol_all", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
