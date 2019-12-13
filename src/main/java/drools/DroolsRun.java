@@ -3,11 +3,12 @@ package drools;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
-
+import gui.GuiWindow;
 
 public class DroolsRun {
 	public static final void main(String[] args) {
-        try {
+        GuiWindow.readJson("C:\\Users\\Szymek\\Desktop\\123\\SI-ExpertSystem\\src\\main\\resources\\data\\data.json");
+		try {
             // load up the knowledge base
 	        KieServices ks = KieServices.Factory.get();
     	    KieContainer kContainer = ks.getKieClasspathContainer();

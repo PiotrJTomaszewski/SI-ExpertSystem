@@ -1,10 +1,13 @@
 package drools
-
+import gui.GuiWindow;
+import javax.swing.JFrame;
+import answers.Answer;
  
-rule "Hello World"
+rule "Init"
     when
     then
-        System.out.println( "123" );
+        System.out.println( "cos tam cos tam" );
+
 end
 
 rule "GoodBye"
@@ -12,3 +15,32 @@ rule "GoodBye"
     then
         System.out.println( "123" );
 end
+
+
+rule "Classic Fiction"
+	when
+		
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "cla_fic";
+		String[] answer= {'yes', 'no'};
+		window = new GuiWindow(mainFrame, question, answer);
+		// System.out.println(window.getSelectedOption());
+		insert (new Answer(question, window.getSelectedOption()));
+end		
+
+rule "High society"
+	when
+		Answer(question == "cla_fic", answer == "yes");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "hig_soc";
+		String[] answer= {'yes', 'no'};
+		window = new GuiWindow(mainFrame, question, answer);
+		// System.out.println(window.getSelectedOption());
+		insert (new Answer(question, window.getSelectedOption()));		
+end
+		
+		

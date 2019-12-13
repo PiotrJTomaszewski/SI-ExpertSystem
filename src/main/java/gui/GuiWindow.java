@@ -10,9 +10,19 @@ import javax.swing.BoxLayout;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Enumeration;
 import javax.swing.JButton;
 import javax.swing.JDialog;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+import com.google.protobuf.TextFormat.ParseException;
+
 
 /**
  * A dialog box to ask question and get the user's answer.
@@ -34,7 +44,7 @@ public class GuiWindow {
 	 * given moment.
 	 */
 	private ButtonGroup radioButtonGroup;
-
+	static JSONObject information; 
 	/**
 	 * Create new GUI window (a dialog box).
 	 * 
@@ -85,7 +95,7 @@ public class GuiWindow {
 	 * @param question A question to be displayed.
 	 */
 	private void addQuestionLabel(String question) {
-		JLabel label = new JLabel(question);
+		JLabel label = new JLabel((String)information.get(question));
 		itemPane.add(label);
 	}
 
@@ -95,7 +105,7 @@ public class GuiWindow {
 	 * @param text An answer variant.
 	 */
 	private void addRadioButton(String text) {
-		JRadioButton radioButton = new JRadioButton(text);
+		JRadioButton radioButton = new JRadioButton((String)information.get(text));
 		radioButtonGroup.add(radioButton);
 		itemPane.add(radioButton);
 	}
@@ -111,5 +121,31 @@ public class GuiWindow {
 			}
 		});
 		itemPane.add(confirmButton);
+	}
+	
+	public static void readJson(String path) {
+		JSONParser jsonParser = new JSONParser();
+		try {
+			FileReader reader = new FileReader(path);
+			Object obj;
+			try {
+				obj = jsonParser.parse(reader);
+				// JSONArray textList = (JSONArray) obj;
+				information = (JSONObject) obj;
+			} catch (org.json.simple.parser.ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }
