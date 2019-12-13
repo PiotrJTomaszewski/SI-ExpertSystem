@@ -26,7 +26,7 @@ rule "Classic Fiction"
 		String question = "cla_fic";
 		String[] answer= {'yes', 'no'};
 		window = new GuiWindow(mainFrame, question, answer);
-		// System.out.println(window.getSelectedOption());
+	    // System.out.println(window.getSelectedOption());
 		insert (new Answer(question, window.getSelectedOption()));
 end		
 

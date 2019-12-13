@@ -3,7 +3,6 @@ package gui;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JRadioButton;
 import javax.swing.ButtonGroup;
 import javax.swing.AbstractButton;
 import javax.swing.BoxLayout;
@@ -16,8 +15,7 @@ import java.io.IOException;
 import java.util.Enumeration;
 import javax.swing.JButton;
 import javax.swing.JDialog;
-
-import org.json.simple.JSONArray;
+import gui.BetterRadioButton;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -44,7 +42,12 @@ public class GuiWindow {
 	 * given moment.
 	 */
 	private ButtonGroup radioButtonGroup;
-	static JSONObject information; 
+	
+	/**
+	 * A dictionary translating token names to strings
+	 */
+	static JSONObject shortNameDict; 
+	
 	/**
 	 * Create new GUI window (a dialog box).
 	 * 
@@ -83,7 +86,8 @@ public class GuiWindow {
 		for (Enumeration<AbstractButton> buttons = radioButtonGroup.getElements(); buttons.hasMoreElements();) {
 			AbstractButton button = buttons.nextElement();
 			if (button.isSelected()) {
-				return button.getText();
+				BetterRadioButton selectedButton = (BetterRadioButton)button;
+				return selectedButton.getShortText();
 			}
 		}
 		return null;
@@ -95,7 +99,7 @@ public class GuiWindow {
 	 * @param question A question to be displayed.
 	 */
 	private void addQuestionLabel(String question) {
-		JLabel label = new JLabel((String)information.get(question));
+		JLabel label = new JLabel((String)shortNameDict.get(question));
 		itemPane.add(label);
 	}
 
@@ -105,7 +109,7 @@ public class GuiWindow {
 	 * @param text An answer variant.
 	 */
 	private void addRadioButton(String text) {
-		JRadioButton radioButton = new JRadioButton((String)information.get(text));
+		BetterRadioButton radioButton = new BetterRadioButton(text, (String)shortNameDict.get(text));
 		radioButtonGroup.add(radioButton);
 		itemPane.add(radioButton);
 	}
@@ -131,7 +135,7 @@ public class GuiWindow {
 			try {
 				obj = jsonParser.parse(reader);
 				// JSONArray textList = (JSONArray) obj;
-				information = (JSONObject) obj;
+				shortNameDict = (JSONObject) obj;
 			} catch (org.json.simple.parser.ParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
