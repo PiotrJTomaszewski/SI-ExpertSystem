@@ -121,6 +121,7 @@ public class GuiWindow {
 		BetterRadioButton radioButton = new BetterRadioButton(text, (String)shortNameDict.get(text));
 		radioButtonGroup.add(radioButton);
 		itemPane.add(radioButton);
+		radioButton.setSelected(true);
 	}
 
 	/**
@@ -138,6 +139,11 @@ public class GuiWindow {
 		itemPane.add(confirmButton);
 	}
 	
+	/**
+	 * Loads a dictionary for question and answer tokens from a JSON file.
+	 * 
+	 * @param path A path of the JSON file to read.
+	 */
 	public static void readJson(String path) {
 		JSONParser jsonParser = new JSONParser();
 		try {
@@ -145,7 +151,6 @@ public class GuiWindow {
 			Object obj;
 			try {
 				obj = jsonParser.parse(reader);
-				// JSONArray textList = (JSONArray) obj;
 				shortNameDict = (JSONObject) obj;
 			} catch (org.json.simple.parser.ParseException e) {
 				// TODO Auto-generated catch block
