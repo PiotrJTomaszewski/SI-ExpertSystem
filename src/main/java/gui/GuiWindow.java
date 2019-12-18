@@ -3,8 +3,10 @@ package gui;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.Border;
 import javax.swing.ButtonGroup;
 import javax.swing.AbstractButton;
+import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import java.awt.BorderLayout;
 import java.awt.Point;
@@ -36,7 +38,12 @@ public class GuiWindow {
 	 * A container holding all of the items, so we can place them nicely inside the
 	 * dialog box.
 	 */
-	private JPanel itemPane;
+	private JPanel itemPanel;
+	
+	/**
+	 * A container holding all of the items that correspond to positive answers.
+	 */
+	private JPanel positiveAnswerPanel;
 
 	/**
 	 * A group holding all the radio buttons, so only one can be selected at any
@@ -71,14 +78,24 @@ public class GuiWindow {
 			frame.setLocation(windowLocation);
 		}
 //		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // TODO: Set close operation
-		itemPane = new JPanel();
+		itemPanel = new JPanel();
+		positiveAnswerPanel = new JPanel();
+		
+		Border border = BorderFactory.createTitledBorder("Yes");
+		positiveAnswerPanel.setBorder(border);
+		
 		// Set the layout
-		itemPane.setLayout(new BoxLayout(itemPane, BoxLayout.Y_AXIS));
+		itemPanel.setLayout(new BoxLayout(itemPanel, BoxLayout.Y_AXIS));
+		positiveAnswerPanel.setLayout(new BoxLayout(positiveAnswerPanel, BoxLayout.Y_AXIS));
+
 		frame.getContentPane().setLayout(new BorderLayout());
-		frame.getContentPane().add(itemPane, BorderLayout.CENTER); // TODO: It seems centering doesn't work
+		frame.getContentPane().add(itemPanel, BorderLayout.CENTER); // TODO: It seems centering doesn't work
 		radioButtonGroup = new ButtonGroup();
 		// Place all necessary elements on the screen
 		addQuestionLabel(question);
+		itemPanel.add(positiveAnswerPanel);
+
+		
 		for (String answer : answers) {
 			addRadioButton(answer);
 		}
@@ -109,7 +126,7 @@ public class GuiWindow {
 	 */
 	private void addQuestionLabel(String question) {
 		JLabel label = new JLabel((String)shortNameDict.get(question));
-		itemPane.add(label);
+		itemPanel.add(label);
 	}
 
 	/**
@@ -120,7 +137,12 @@ public class GuiWindow {
 	private void addRadioButton(String text) {
 		BetterRadioButton radioButton = new BetterRadioButton(text, (String)shortNameDict.get(text));
 		radioButtonGroup.add(radioButton);
-		itemPane.add(radioButton);
+		if (text == "no") {
+			itemPanel.add(radioButton);
+		}
+		else {
+			positiveAnswerPanel.add(radioButton);
+		}
 		radioButton.setSelected(true);
 	}
 
@@ -136,7 +158,7 @@ public class GuiWindow {
 				frame.setVisible(false);
 			}
 		});
-		itemPane.add(confirmButton);
+		itemPanel.add(confirmButton);
 	}
 	
 	/**
