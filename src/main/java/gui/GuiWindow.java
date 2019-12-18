@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
+import javax.swing.border.EmptyBorder;
 import javax.swing.ButtonGroup;
 import javax.swing.AbstractButton;
 import javax.swing.BorderFactory;
@@ -86,16 +87,16 @@ public class GuiWindow {
 		
 		// Set the layout
 		itemPanel.setLayout(new BoxLayout(itemPanel, BoxLayout.Y_AXIS));
+		itemPanel.setBorder(new EmptyBorder(10, 10, 10, 10));  // Padding from edges
 		positiveAnswerPanel.setLayout(new BoxLayout(positiveAnswerPanel, BoxLayout.Y_AXIS));
 
 		frame.getContentPane().setLayout(new BorderLayout());
-		frame.getContentPane().add(itemPanel, BorderLayout.CENTER); // TODO: It seems centering doesn't work
+		frame.getContentPane().add(itemPanel);
 		radioButtonGroup = new ButtonGroup();
 		// Place all necessary elements on the screen
 		addQuestionLabel(question);
 		itemPanel.add(positiveAnswerPanel);
 
-		
 		for (String answer : answers) {
 			addRadioButton(answer);
 		}
@@ -126,6 +127,7 @@ public class GuiWindow {
 	 */
 	private void addQuestionLabel(String question) {
 		JLabel label = new JLabel((String)shortNameDict.get(question));
+		//label.setAlignmentX(JLabel.CENTER_ALIGNMENT);
 		itemPanel.add(label);
 	}
 
