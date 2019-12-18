@@ -24,7 +24,7 @@ rule "Classic Fiction"
 		GuiWindow window;
 		JFrame mainFrame = new JFrame();
 		String question = "cla_fic";
-		String[] answer = {'yes', 'no'};
+		String[] answer = {"hig_soc", "no"};
 		window = new GuiWindow(mainFrame, question, answer);
 	    // System.out.println(window.getSelectedOption());
 		insert (new Answer(question, window.getSelectedOption()));
@@ -32,12 +32,12 @@ end
 
 rule "High society"
 	when
-		Answer(question == "cla_fic", answer == "yes");
+		Answer(question == "cla_fic", answer == "hig_soc");
 	then
 		GuiWindow window;
 		JFrame mainFrame = new JFrame();
 		String question = "hig_soc";
-		String[] answer = {'yes', 'no'};
+		String[] answer = {"rel_int", "rus_lit", "im_an_ang", "no"};
 		window = new GuiWindow(mainFrame, question, answer);
 		// System.out.println(window.getSelectedOption());
 		insert (new Answer(question, window.getSelectedOption()));		
@@ -51,6 +51,198 @@ rule "Social issues"
 		JFrame mainFrame = new JFrame();
 		String question = "soc_iss";
 		String[] answer = {"do_you_hav_any_clas", "rac_in_ame", "pol_all", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "Adventure time"
+	when
+		Answer(question == "soc_iss", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "adv_tim";
+		String[] answer = {"let_pla_war", "loo_for_som", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "Americana"
+	when
+		Answer(question == "adv_tim", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "ame";
+		String[] answer = {"cal", "the_sou", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "Fantasy"
+	when
+		Answer(question == "ame", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "fan";
+		String[] answer = {"abs_mut", "mas_epi", "don_bit_me_bro", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "Classic si-fi"
+	when
+		Answer(question == "fan", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "cla_sif";
+		String[] answer = {"i_can_wai_for_the_fut", "tim_tra", "end_of_the_wor", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "Magic realism"
+	when
+		Answer(question == "cla_sif", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "mag_rea";
+		String[] answer = {"an_ind_pli", "epi", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "Short stories?"
+	when
+		Answer(question == "mag_rea", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "sho_sto";
+		String[] answer = {"the_one_and_onl", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "Poetry"
+	when
+		Answer(question == "sho_sto", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "poe";
+		String[] answer = {"con", "wor_of_the_you", "ame_cla"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "Historical fiction"
+	when
+		Answer(question == "cla_fic", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "his_fic";
+		String[] answer = {"fou_pla", "the_pol_sce", "fam_tie", "god_ble_rel", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "That's mysterious"
+	when
+		Answer(question == "his_fic", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "tha_mys";
+		String[] answer = {"fam", "mur", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "Violent youth"
+	when
+		Answer(question == "tha_mys", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "vio_you";
+		String[] answer = {"mil_the", "tee_ang", "sch_sho", "afg_cas_sys", "chi_sol", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "Dark fiction"
+	when
+		Answer(question == "vio_you", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "dar_fic";
+		String[] answer = {"mem_of_a_tro_fam", "gho_in_the_roo", "a_fam_in_cap", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "Science fiction"
+	when
+		Answer(question == "dar_fic", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "sci_fic";
+		String[] answer = {"ali", "dar_fut", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "Can i have drawings"
+	when
+		Answer(question == "sci_fi", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "can_i_hav_dra_wit_my_wor";
+		String[] answer = {"com_of_age_as_an_out_in_a_new_lan", "gro_up_und_an_opp_reg", "sur_and_str", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "Short stories without drawings"
+	when
+		Answer(question == "can_i_hav_dra_wit_my_wor", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "sho_sto_wo_dra";
+		String[] answer = {"fan_sho", "fam_lif", "spo_on_and_off_the_fie", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "Something different"
+	when
+		Answer(question == "sho_sto_wo_dra", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "som_dif";
+		String[] answer = {"bea_and_the_bea_in_new_yor", "phi_dog", "spo_and_dru", "no"};
+		window = new GuiWindow(mainFrame, question, answer);
+		insert (new Answer(question, window.getSelectedOption()));
+end
+
+rule "The kids are alright"
+	when
+		Answer(question == "som_dif", answer == "no");
+	then
+		GuiWindow window;
+		JFrame mainFrame = new JFrame();
+		String question = "the_kid_are_alr";
+		String[] answer = {"tra", "tou_sit"};
 		window = new GuiWindow(mainFrame, question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
