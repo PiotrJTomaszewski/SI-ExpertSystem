@@ -25,7 +25,7 @@ rule "Classic Fiction"
 		QuestionAndAnswerWindow window;
 		JFrame mainFrame = new JFrame();
 		String question = "cla_fic";
-		String[] answer = {"hig_soc", "no"};
+		String[] answer = {"yes", "no"};
 		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
 	    // System.out.println(window.getSelectedOption());
 		insert (new Answer(question, window.getSelectedOption()));
@@ -33,7 +33,7 @@ end
 
 rule "High society"
 	when
-		Answer(question == "cla_fic", answer == "hig_soc");
+		Answer(question == "cla_fic", answer == "yes");
 	then
 		QuestionAndAnswerWindow window;
 		JFrame mainFrame = new JFrame();
@@ -413,7 +413,7 @@ end
 
 rule "An individuals plight"
 	when
-		Answer(question == "mag_rea", answer == "an_ind_pil");
+		Answer(question == "mag_rea", answer == "an_ind_pli");
 	then
 		BookInfoWindow window;
 		JFrame mainFrame = new JFrame();
@@ -463,7 +463,7 @@ end
 
 rule "American classic"
 	when
-		Answer(question == "poe", answer == "men_cla");
+		Answer(question == "poe", answer == "ame_cla");
 	then
 		BookInfoWindow window;
 		JFrame mainFrame = new JFrame();

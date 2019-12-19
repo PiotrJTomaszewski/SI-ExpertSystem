@@ -78,8 +78,10 @@ public class QuestionAndAnswerWindow {
 		itemPanel = new JPanel();
 		positiveAnswerPanel = new JPanel();
 		
-		Border border = BorderFactory.createTitledBorder("Yes");
-		positiveAnswerPanel.setBorder(border);
+		if (answers[0] != "yes") {
+			Border border = BorderFactory.createTitledBorder("Yes");
+			positiveAnswerPanel.setBorder(border);
+		}
 		// Set the layout
 		itemPanel.setLayout(new BoxLayout(itemPanel, BoxLayout.Y_AXIS));
 		itemPanel.setBorder(new EmptyBorder(10, 10, 10, 10));  // Padding from edges

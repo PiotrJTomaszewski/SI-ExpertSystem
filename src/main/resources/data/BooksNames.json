@@ -24,7 +24,7 @@
 
 "the_methamorphosis": {"theme": "Absurdist mutation", "title": "The Metamorphosis", "author": "Franz Kafka"},
 "lord_of_the_rings": {"theme": "Massive epic", "title": "Lord of the Rings", "author": "J.R.R. Tolkien"},
-"i_am_legend": {"theme": "Don't bite me bro", "title": "I am legend", "author": "Richard Matheson"},
+"i_am_legend": {"theme": "Don't bite me bro", "title": "I am Legend", "author": "Richard Matheson"},
 
 "fahrenheit_451": {"theme": "Information Control", "title": "Fahrenheit 451", "author": "Ray Bradbury"},
 "brave_new_world": {"theme": "Genetically engineered humans", "title": "Brave New World", "author": "Aldous Huxley"},
@@ -57,7 +57,7 @@
 "the_plot_against_america": {"theme": "A dark 'what if?'", "title": "The Plot Against America", "author": "Philip Roth"},
 "the_rum_diary": {"theme": "Real estate and island living", "title": "The Rum Diary", "author": "Hunter S. Thompson"},
 "half_brother": {"theme": "I want a baby brother", "title": "Half Brother", "author": "Kenneth Oppel"},
-"a_great_and_terrible_beauty": {"theme": "Tragedy strikes", "title": "A Great and Terrible Beauty", "author": "Livva Bray"},
+"a_great_and_terrible_beauty": {"theme": "Tragedy strikes", "title": "A Great and Terrible Beauty", "author": "Libba Bray"},
 "the_poisonwood_bible": {"theme": "A missionary family in Africa", "title": "The Poisonwood Bible", "author": "Barbara Kingsolver"},
 "death_comes_for_the_archbishop": {"theme": "Catholicism in the Wild West", "title": "Death Comes for the Archbishop", "author": "Willa Cather"},
 "the_pillars_of_the_earth": {"theme": "The corner stone", "title": "The Pillars of the Earth", "author": "Ken Follett"},
@@ -72,11 +72,11 @@
 "feed": {"theme": "Future Internet", "title": "Feed", "author": "M.T. Anderson"},
 "never_let_me_go": {"theme": "Harvest the clones", "title": "Never Let Me Go", "author": "Kazuo Ishiguro"},
 "the_house_of_the_scorpion": {"theme": "Drug lords and clones", "title": "The House of the Scorpion", "author": "Nancy Farmer"},
-"incarceron": {"theme": "Where do you think you are going", "title": "Incarceron", "author": "Catharine Fisher"},
+"incarceron": {"theme": "Where do you think you're going", "title": "Incarceron", "author": "Catharine Fisher"},
 
-"american_born_chinese": {"theme": "Coming of ages as an oudsider in a new land", "title": "American born chinese", "author": "Luen Yang & Lark Pien"},
-"persepous": {"theme": "Growing un under an oppressive regime", "title": "Perepous", "author": "Marjane Satrapi"},
-"maus": {"theme": "Survival and struggle", "title": "Maus", "author": "Art Spiegelamn"},
+"american_born_chinese": {"theme": "Coming of ages as an oudsider in a new land", "title": "American Born Chinese", "author": "Luen Yang & Lark Pien"},
+"persepous": {"theme": "Growing up under an oppressive regime", "title": "Persepolis", "author": "Marjane Satrapi"},
+"maus": {"theme": "Survival and struggle", "title": "Maus", "author": "Art Spiegelman"},
 
 "the_lone_ranger_and_tonto_fistfight_in_heaven": {"theme": "Fantastical", "title": "The Lone Ranger and Tonto Fistfight in Heaven", "author": "Sherman Alexie"},
 "unaccustomed_earth": {"theme": "Family life", "title": "Unaccustomed Earth", "author": "Jhumpa Lahiri"},
@@ -87,7 +87,7 @@
 "gym_candy": {"theme": "Sports and drugs", "title": "Gym Candy", "author": "Carl Deuker"},
 
 "twisted": {"theme": "An underdog rises", "title": "Twisted", "author": "Laurie Halse Anderson"},
-"true_confessions_of_a_hearless_girl": {"theme": "Troubled youth", "title": "True Confessions of a Hearless Girl", "author": "Martha Brooks"},
+"true_confessions_of_a_hearless_girl": {"theme": "Troubled youth", "title": "True Confessions of a Heartless Girl", "author": "Martha Brooks"},
 "just_listen": {"theme": "Relationship strife", "title": "Just Listen", "author": "Sarah Dessen"},
 "if_i_stay": {"theme": "Picking up the pieces", "title": "If I Stay", "author": "Gayle Forman"},
 "tyrell": {"theme": "Coming of age with few options", "title": "Tyrell", "author": "Coe Booth"},
