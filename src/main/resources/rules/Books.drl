@@ -44,16 +44,6 @@ rule "High society"
 		insert (new Answer(question, window.getSelectedOption()));		
 end
 
-rule "Relationship Intrigue"
-	when
-		Answer(question == "hig_soc", answer == "rel_int");
-	then
-		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
-		String[] books = {"the_great_gatsby", "rebecca"};
-		window = new BookInfoWindow(mainFrame, books);
-end
-
 rule "Social issues"
 	when
 		Answer(question == "hig_soc", answer == "no");
@@ -256,4 +246,498 @@ rule "The kids are alright"
 		String[] answer = {"tra", "tou_sit"};
 		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
+end
+
+
+//BOOKS
+
+rule "Relationship Intrigue"
+	when
+		Answer(question == "hig_soc", answer == "rel_int");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"the_great_gatsby", "rebecca"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Russian Lit"
+	when
+		Answer(question == "hig_soc", answer == "rus_lit");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"anna_karenina", "fathers_and_sons"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "I am an anglophile."
+	when
+		Answer(question == "hig_soc", answer == "im_an_ang");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"the_taming_of_the_shrew", "jane_eyre", "sense_and_sensibility"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Do you have any class?"
+	when
+		Answer(question == "soc_iss", answer == "do_you_hav_any_clas");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"oliver_twist", "les_miserables"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Race in America?"
+	when
+		Answer(question == "soc_iss", answer == "rac_in_ame");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"color_purple", "uncle_toms_cabin"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Political allegory"
+	when
+		Answer(question == "soc_iss", answer == "pol_all");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"animal_farm"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "California"
+	when
+		Answer(question == "ame", answer == "cal");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"of_mice_and_men"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "The south"
+	when
+		Answer(question == "ame", answer == "the_sou");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"adventures_of_huckelberry_finn"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Lets play war"
+	when
+		Answer(question == "adv_tim", answer == "let_pla_war");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"for_whom_the_bell_tolls", "catch_22"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Looking for something?"
+	when
+		Answer(question == "adv_tim", answer == "loo_for_som");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"heart_of_darkness", "moby_dick", "the_count_of_monte_cristo"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Absurdist mutation"
+	when
+		Answer(question == "fan", answer == "abs_mut");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"the_methamorphosis"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Massive epic"
+	when
+		Answer(question == "fan", answer == "mas_epi");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"lord_of_the_rings"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Dont bite me bro"
+	when
+		Answer(question == "fan", answer == "don_bit_me_bro");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"i_am_legend"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "I cant wait for the future"
+	when
+		Answer(question == "cla_sif", answer == "i_can_wai_for_the_fut");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"fahrenheit_451", "brave_new_world", "1984"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Time travel"
+	when
+		Answer(question == "cla_sif", answer == "tim_tra");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"slaughterhouse_five"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "End of the world"
+	when
+		Answer(question == "cla_sif", answer == "end_of_the_wor");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"cats_cradle"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "An individuals plight"
+	when
+		Answer(question == "mag_rea", answer == "an_ind_pil");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"the_picture_of_dorian_gray"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Epic"
+	when
+		Answer(question == "mag_rea", answer == "epi");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"one_hundred_years_of_solitude"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "The one and only"
+	when
+		Answer(question == "sho_sto", answer == "the_one_and_onl");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"selected_tales"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Contemporary"
+	when
+		Answer(question == "poe", answer == "con");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"poetry_180", "sailing_alone_around_the_room"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Words of the young"
+	when
+		Answer(question == "poe", answer == "wor_of_the_you");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"you_hear_me", "things_i_have_to_tell_you"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "American classic"
+	when
+		Answer(question == "poe", answer == "men_cla");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"the_collected_poems_of"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+//contemporary fiction
+rule "Family"
+	when
+		Answer(question == "tha_mys", answer == "fam");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"extremely_loud_and_incredibly_close"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Murder"
+	when
+		Answer(question == "tha_mys", answer == "mur");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"the_curious_incident_of_the_dog_in_the_nighttime"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Military therapy"
+	when
+		Answer(question == "vio_you", answer == "mil_the");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"boot_camp"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Teen angst"
+	when
+		Answer(question == "vio_you", answer == "tee_ang");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"flight"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "School shooting"
+	when
+		Answer(question == "vio_you", answer == "sch_sho");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"school_shooting"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Afghan caste system"
+	when
+		Answer(question == "vio_you", answer == "afg_ca_sys");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"kite_ruuner"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Child soliders"
+	when
+		Answer(question == "vio_you", answer == "shi_sol");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"what_is_the_what"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Foul play"
+	when
+		Answer(question == "his_fic", answer == "fou_pla");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"snow_falling_on_cedars", "dante_club"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "The political scene"
+	when
+		Answer(question == "his_fic", answer == "the_pol_sce");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"the_plot_against_america", "the_rum_diary"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Family ties"
+	when
+		Answer(question == "his_fic", answer == "fam_tie");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"half_brother", "a_great_and_terrible_beauty"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "God bless religion"
+	when
+		Answer(question == "his_fic", answer == "god_ble_rel");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"the_poisonwood_bible", "death_comes_for_the_archbishop", "the_pillars_of_the_earth"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Memory of troubled family"
+	when
+		Answer(question == "dar_fic", answer == "mem_of_a_tro_fam");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"the_blind_assassin"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Ghost in the room"
+	when
+		Answer(question == "dar_fic", answer == "gho_in_the_roo");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"lovely_bones"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "A family in captivity"
+	when
+		Answer(question == "dar_fic", answer == "a_fam_in_cap");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"room"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Aliens"
+	when
+		Answer(question == "sci_fic", answer == "ali");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"enders_game", "the_hitchkikers_guide_to_the_galaxy"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Dark futures"
+	when
+		Answer(question == "sci_fic", answer == "dar_fut");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"unwind", "feed", "never_let_me_go", "the_house_of_the_scorpion", "incarceron"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Coming of age as an oudsider in a new land"
+	when
+		Answer(question == "can_i_hav_dra_wit_my_wor", answer == "com_of_age_as_an_out_in_a_new_lan");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"american_born_chinese"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Growing un under an oppressive regime"
+	when
+		Answer(question == "can_i_hav_dra_wit_my_wor", answer == "gro_up_und_an_opp_reg");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"persepous"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Survival and struggle"
+	when
+		Answer(question == "can_i_hav_dra_wit_my_wor", answer == "sur_and_str");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"maus"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Fantasical"
+	when
+		Answer(question == "sho_sto_wo_drawings", answer == "fan_sho");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"the_lone_ranger_and_tonto_fistfight_in_heaven"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Family life"
+	when
+		Answer(question == "sho_sto_wo_drawings", answer == "fam_lif");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"unaccustomed_earth"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Sports, on and off the field"
+	when
+		Answer(question == "sho_sto_wo_drawings", answer == "spo_on_and_off_the_fie");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"athletic_shorts"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Beauty and beast in NY"
+	when
+		Answer(question == "som_dif", answer == "bea_and_the_bea_in_new_yor");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"beastly"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Philosophical dog"
+	when
+		Answer(question == "som_dif", answer == "phi_dog");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"the_art_or_racing_in_the_rain"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Sports and drugs"
+	when
+		Answer(question == "som_dif", answer == "spo_and_dru");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"gym_candy"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Transformations"
+	when
+		Answer(question == "the_kid_are_alr", answer == "tra");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"twisted", "true_confessions_of_a_hearless_girl", "just_listen"};
+		window = new BookInfoWindow(mainFrame, books);
+end
+
+rule "Tough situation"
+	when
+		Answer(question == "the_kid_are_alr", answer == "tou_sit");
+	then
+		BookInfoWindow window;
+		JFrame mainFrame = new JFrame();
+		String[] books = {"if_i_stay", "tyrell", "first_part_last", "november_blues"};
+		window = new BookInfoWindow(mainFrame, books);
 end
