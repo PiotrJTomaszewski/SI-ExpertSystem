@@ -29,7 +29,7 @@ import com.google.protobuf.TextFormat.ParseException;
 /**
  * A dialog box to ask question and get the user's answer.
  */
-public class GuiWindow {
+public class QuestionAndAnswerWindow {
 	/**
 	 * Frame holding all of the dialog box content.
 	 */
@@ -63,14 +63,14 @@ public class GuiWindow {
 	private static Point windowLocation;
 	
 	/**
-	 * Create new GUI window (a dialog box).
+	 * Create new GUI window (a dialog box) for questions and answers.
 	 * 
 	 * @param parent   A parent frame. Parent's execution will be hold until this
 	 *                 dialog box is closed.
 	 * @param question A question to ask the user.
 	 * @param answers  An array of all possible answers.
 	 */
-	public GuiWindow(JFrame parent, String question, String[] answers) {
+	public QuestionAndAnswerWindow(JFrame parent, String question, String[] answers) {
 		// Configure the window
 		frame = new JDialog(parent, question);
 		frame.setModal(true);
@@ -84,7 +84,6 @@ public class GuiWindow {
 		
 		Border border = BorderFactory.createTitledBorder("Yes");
 		positiveAnswerPanel.setBorder(border);
-		
 		// Set the layout
 		itemPanel.setLayout(new BoxLayout(itemPanel, BoxLayout.Y_AXIS));
 		itemPanel.setBorder(new EmptyBorder(10, 10, 10, 10));  // Padding from edges
@@ -173,23 +172,11 @@ public class GuiWindow {
 		try {
 			FileReader reader = new FileReader(path);
 			Object obj;
-			try {
-				obj = jsonParser.parse(reader);
-				shortNameDict = (JSONObject) obj;
-			} catch (org.json.simple.parser.ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			obj = jsonParser.parse(reader);
+			shortNameDict = (JSONObject) obj;
+
+		} catch (Throwable e) {
 			e.printStackTrace();
 		}
-		
 	}
 }
