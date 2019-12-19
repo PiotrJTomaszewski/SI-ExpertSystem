@@ -61,7 +61,7 @@ public class BookInfoWindow {
 		}
 		frame = new JDialog(parent, windowTitle);
 		frame.setModal(true);
-		frame.setSize(300, 300); // TODO: Choose window size
+		frame.setSize(500, 500); // TODO: Choose window size
 		if (windowLocation != null) {
 			frame.setLocation(windowLocation);
 		}
@@ -99,12 +99,12 @@ public class BookInfoWindow {
 		String theme = (String) bookInfo.get("theme");
 		String title = (String) bookInfo.get("title");
 		String author = (String) bookInfo.get("author");
-		Border border = BorderFactory.createTitledBorder(theme);
+		Border border = BorderFactory.createTitledBorder("");
 		bookPanel[index].setBorder(border);
-//		JLabel themeLabel = new JLabel("Book theme: " + theme);
+		JLabel themeLabel = new JLabel("Book theme: " + theme);
 		JLabel titleLabel = new JLabel("Title: " + title);
 		JLabel authorLabel = new JLabel("Author: " + author);
-//		bookPanel[index].add(themeLabel);
+		bookPanel[index].add(themeLabel);
 		bookPanel[index].add(titleLabel);
 		bookPanel[index].add(authorLabel);
 	}

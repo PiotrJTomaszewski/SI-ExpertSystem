@@ -524,7 +524,7 @@ end
 
 rule "Afghan caste system"
 	when
-		Answer(question == "vio_you", answer == "afg_ca_sys");
+		Answer(question == "vio_you", answer == "afg_cas_sys");
 	then
 		BookInfoWindow window;
 		JFrame mainFrame = new JFrame();
@@ -534,7 +534,7 @@ end
 
 rule "Child soliders"
 	when
-		Answer(question == "vio_you", answer == "shi_sol");
+		Answer(question == "vio_you", answer == "chi_sol");
 	then
 		BookInfoWindow window;
 		JFrame mainFrame = new JFrame();

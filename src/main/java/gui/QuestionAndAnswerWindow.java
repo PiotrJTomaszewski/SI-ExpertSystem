@@ -74,7 +74,7 @@ public class QuestionAndAnswerWindow {
 		// Configure the window
 		frame = new JDialog(parent, question);
 		frame.setModal(true);
-		frame.setSize(300, 300); // TODO: Choose window size
+		frame.setSize(500, 500); // TODO: Choose window size
 		if (windowLocation != null) {
 			frame.setLocation(windowLocation);
 		}
