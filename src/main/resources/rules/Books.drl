@@ -202,7 +202,7 @@ end
 
 rule "Can i have drawings"
 	when
-		Answer(question == "sci_fi", answer == "no");
+		Answer(question == "sci_fic", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
 		JFrame mainFrame = new JFrame();
