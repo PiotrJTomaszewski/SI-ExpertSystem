@@ -664,7 +664,7 @@ end
 
 rule "Fantasical"
 	when
-		Answer(question == "sho_sto_wo_drawings", answer == "fan_sho");
+		Answer(question == "sho_sto_wo_dra", answer == "fan_sho");
 	then
 		BookInfoWindow window;
 		JFrame mainFrame = new JFrame();
@@ -674,7 +674,7 @@ end
 
 rule "Family life"
 	when
-		Answer(question == "sho_sto_wo_drawings", answer == "fam_lif");
+		Answer(question == "sho_sto_wo_dra", answer == "fam_lif");
 	then
 		BookInfoWindow window;
 		JFrame mainFrame = new JFrame();
@@ -684,7 +684,7 @@ end
 
 rule "Sports, on and off the field"
 	when
-		Answer(question == "sho_sto_wo_drawings", answer == "spo_on_and_off_the_fie");
+		Answer(question == "sho_sto_wo_dra", answer == "spo_on_and_off_the_fie");
 	then
 		BookInfoWindow window;
 		JFrame mainFrame = new JFrame();

@@ -4,15 +4,10 @@ import java.awt.BorderLayout;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
-import java.util.Enumeration;
 
-import javax.swing.AbstractButton;
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
-import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
@@ -23,8 +18,6 @@ import javax.swing.border.EmptyBorder;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
-import com.google.protobuf.TextFormat.ParseException;
 
 public class BookInfoWindow {
 	/**
@@ -95,7 +88,6 @@ public class BookInfoWindow {
 
 	private void addBook(String bookShort, int index) {
 		JSONObject bookInfo = (JSONObject) shortNameDict.get(bookShort);
-		System.out.println(bookInfo.get("theme"));
 		String theme = (String) bookInfo.get("theme");
 		String title = (String) bookInfo.get("title");
 		String author = (String) bookInfo.get("author");

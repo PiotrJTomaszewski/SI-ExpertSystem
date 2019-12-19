@@ -13,17 +13,13 @@ import java.awt.BorderLayout;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.Enumeration;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import gui.BetterRadioButton;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
-import com.google.protobuf.TextFormat.ParseException;
 
 
 /**
