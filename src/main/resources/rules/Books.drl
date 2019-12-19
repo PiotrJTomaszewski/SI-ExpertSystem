@@ -26,7 +26,6 @@ rule "Classic Fiction"
 		String question = "cla_fic";
 		String[] answer = {"yes", "no"};
 		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
-	    // System.out.println(window.getSelectedOption());
 		insert (new Answer(question, window.getSelectedOption()));
 end		
 
@@ -39,7 +38,6 @@ rule "High society"
 		String question = "hig_soc";
 		String[] answer = {"rel_int", "rus_lit", "im_an_ang", "no"};
 		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
-		// System.out.println(window.getSelectedOption());
 		insert (new Answer(question, window.getSelectedOption()));		
 end
 
