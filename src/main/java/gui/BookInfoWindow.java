@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileReader;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
@@ -17,7 +16,6 @@ import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 
 public class BookInfoWindow {
 	/**
@@ -39,7 +37,7 @@ public class BookInfoWindow {
 	/**
 	 * A dictionary translating token names to strings.
 	 */
-	static JSONObject shortNameDict;
+	private static JSONObject shortNameDict;
 
 	/**
 	 * Location of the window on the screen.
@@ -124,19 +122,10 @@ public class BookInfoWindow {
 	}
 
 	/**
-	 * Loads a dictionary for question and answer tokens from a JSON file.
-	 * 
-	 * @param path A path of the JSON file to read.
+	 * Stores a dictionary into a local variable.
 	 */
-	public static void readJson(String path) {
-		JSONParser jsonParser = new JSONParser();
-		try {
-			FileReader reader = new FileReader(path);
-			Object obj;
-			obj = jsonParser.parse(reader);
-			shortNameDict = (JSONObject) obj;
-		} catch (Throwable e) {
-			e.printStackTrace();
-		}
+	public static void storeDictionary(JSONObject dictionary) {
+		shortNameDict = dictionary;
 	}
+
 }

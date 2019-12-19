@@ -10,9 +10,9 @@ rule "Init"
     then
     	GreetingsWindow window;
     	JFrame mainFrame = new JFrame();
-    	String title = "A Summer Reading Book Recommendation";
+    	String title = "Summer Reading Book Recommendation";
     	String[] authors = {"Szymon Michalak", "Piotr Tomaszewski"};
-    	String[] remainingText = {"For Artificial Intelligence Course at PUT", "Based on a flowchart by teach.com"};
+    	String[] remainingText = {"For Artificial Intelligence course at PUT", "Based on a flowchart by teach.com"};
     	window = new GreetingsWindow(mainFrame, title, authors, remainingText);
 		insert (new Answer("user_greeted", "yes"));
 end
