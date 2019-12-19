@@ -1,26 +1,25 @@
 package drools
 import gui.QuestionAndAnswerWindow;
 import gui.BookInfoWindow;
+import gui.GreetingsWindow;
 import javax.swing.JFrame;
 import answers.Answer;
- 
+
 rule "Init"
     when
     then
-        System.out.println( "cos tam cos tam" );
-
+    	GreetingsWindow window;
+    	JFrame mainFrame = new JFrame();
+    	String title = "A Summer Reading Book Recommendation";
+    	String[] authors = {"Szymon Michalak", "Piotr Tomaszewski"};
+    	String[] remainingText = {"For Artificial Intelligence Course at PUT", "Based on a flowchart by teach.com"};
+    	window = new GreetingsWindow(mainFrame, title, authors, remainingText);
+		insert (new Answer("user_greeted", "yes"));
 end
-
-rule "GoodBye"
-    when
-    then
-        System.out.println( "123" );
-end
-
 
 rule "Classic Fiction"
 	when
-		
+		Answer(question == "user_greeted", answer == "yes");
 	then
 		QuestionAndAnswerWindow window;
 		JFrame mainFrame = new JFrame();

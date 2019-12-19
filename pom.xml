@@ -7,10 +7,10 @@
 
 	<groupId>pl.expertSystem</groupId>
 	<artifactId>summerReadingSI</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 
-	<name>Drools :: Sample Maven Project</name>
-	<description>A sample Drools Maven project</description>
+	<name>Summer Reading Book Recommendation</name>
+	<description>A project for Artificial Intelligence course</description>
 
 	<properties>
 		<runtime.version>7.3.0.Final</runtime.version>

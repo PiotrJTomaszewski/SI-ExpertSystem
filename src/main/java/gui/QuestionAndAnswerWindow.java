@@ -49,7 +49,7 @@ public class QuestionAndAnswerWindow {
 	private ButtonGroup radioButtonGroup;
 	
 	/**
-	 * A dictionary translating token names to strings
+	 * A dictionary translating token names to strings.
 	 */
 	static JSONObject shortNameDict;
 	
@@ -70,11 +70,10 @@ public class QuestionAndAnswerWindow {
 		// Configure the window
 		frame = new JDialog(parent, question);
 		frame.setModal(true);
-		frame.setSize(500, 500); // TODO: Choose window size
+		frame.setSize(500, 500);
 		if (windowLocation != null) {
 			frame.setLocation(windowLocation);
 		}
-//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // TODO: Set close operation
 		itemPanel = new JPanel();
 		positiveAnswerPanel = new JPanel();
 		

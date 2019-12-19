@@ -31,10 +31,13 @@ public class BookInfoWindow {
 	 */
 	private JPanel itemPanel;
 
+	/**
+	 * An array of containers, each holding a single book.
+	 */
 	private JPanel[] bookPanel;
 
 	/**
-	 * A dictionary translating token names to strings
+	 * A dictionary translating token names to strings.
 	 */
 	static JSONObject shortNameDict;
 
@@ -54,11 +57,10 @@ public class BookInfoWindow {
 		}
 		frame = new JDialog(parent, windowTitle);
 		frame.setModal(true);
-		frame.setSize(500, 500); // TODO: Choose window size
+		frame.setSize(500, 500);
 		if (windowLocation != null) {
 			frame.setLocation(windowLocation);
 		}
-//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // TODO: Set close operation
 		itemPanel = new JPanel();
 
 //		Border border = BorderFactory.createTitledBorder("Yes");
@@ -85,7 +87,12 @@ public class BookInfoWindow {
 		createConfirmButton();
 		frame.setVisible(true);
 	}
-
+	
+	/**
+	 * Adds a new book info to the window.
+	 * @param bookShort A token representing a book
+	 * @param index An index of the container holding this book
+	 */
 	private void addBook(String bookShort, int index) {
 		JSONObject bookInfo = (JSONObject) shortNameDict.get(bookShort);
 		String theme = (String) bookInfo.get("theme");
