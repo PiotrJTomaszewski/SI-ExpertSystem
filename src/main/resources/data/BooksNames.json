@@ -1,96 +1,96 @@
 {
-"the_great_gatsby": {"theme": "New money", "title": "The Great Gatsby", "author": "F. Scott Fitzgerald"},
-"rebecca": {"theme": "Old money", "title": "Rebecca", "author": "Daphne du Maurier"},
-"anna_karenina": {"theme": "Narcissism", "title": "Anna Karenina", "author": "Leo Tolstoy"},
-"fathers_and_sons": {"theme": "Nihilism", "title": "Fathers and Sons", "author": "Ivan Turgenev"},
-"the_taming_of_the_shrew": {"theme": "Make it a play", "title": "The Taming of the Shrew", "author": "William Shakespeare"},
-"jane_eyre": {"theme": "Growing up rich", "title": "Jane Eyre", "author": "Charlotte Brontë"},
-"sense_and_sensibility": {"theme": "A fall from grace", "title": "Sense and Sensibility", "author": "Jane Austen"},
-
-"oliver_twist": {"theme": "England", "title": "Oliver Twist", "author": "Charles Dickens"},
-"les_miserables": {"theme": "France", "title": "Les Misérables", "author": "Victor Hugo"},
-"color_purple": {"theme": "Post slavery", "title": "Color Purple", "author": "Alice Walker"},
-"uncle_toms_cabin": {"theme": "Pre slavery", "title": "Uncle Tom's Cabin", "author": "Harriet Becher Stowe"},
-"animal_farm": {"theme": "Political allegory", "title": "Animal Farm", "author": "George Orwell"},
-
-"of_mice_and_men": {"theme": "California", "title": "Of Mice and Men", "author": "John Steinbeck"},
-"adventures_of_huckelberry_finn": {"theme": "The South", "title": "Adventures of Huckleberry Finn", "author": "Mark Twain"},
-
-"for_whom_the_bell_tolls": {"theme": "Spanish Civil War", "title": "For Whom the Bell Tolls", "author": "Ernest Hemingway"},
-"catch_22": {"theme": "World War II", "title": "Catch 22", "author": "Joseph Heller"},
-"heart_of_darkness": {"theme": "Pure Evil", "title": "Heart of Darkness", "author": "Joseph Conrad"},
-"moby_dick": {"theme": "An Epic Hunt", "title": "Moby Dick", "author": "Herman Melville"},
-"the_count_of_monte_cristo": {"theme": "Revenge", "title": "The Count of Monte Cristo", "author": "Alexandre Dumas"},
-
-"the_methamorphosis": {"theme": "Absurdist mutation", "title": "The Metamorphosis", "author": "Franz Kafka"},
-"lord_of_the_rings": {"theme": "Massive epic", "title": "Lord of the Rings", "author": "J.R.R. Tolkien"},
-"i_am_legend": {"theme": "Don't bite me bro", "title": "I am Legend", "author": "Richard Matheson"},
-
-"fahrenheit_451": {"theme": "Information Control", "title": "Fahrenheit 451", "author": "Ray Bradbury"},
-"brave_new_world": {"theme": "Genetically engineered humans", "title": "Brave New World", "author": "Aldous Huxley"},
-"1984": {"theme": "Thought police", "title": "1984", "author": "George Orwell"},
-"slaughterhouse_five": {"theme": "Time travel", "title": "Slaughterhouse Five", "author": "Kurt Vonnegut Jr."},
-"cats_cradle": {"theme": "End of the world", "title": "Cat's Cradle", "author": "Kurt Vonnegut Jr."},
-
-"the_picture_of_dorian_gray": {"theme": "An individual's plight", "title": "The Picture of Dorian Gray", "author": "Oscar Wilde"},
-"one_hundred_years_of_solitude": {"theme": "Epic", "title": "One Hundred Years of Solitude", "author": "Gabriel García Márquez"},
-
-"selected_tales": {"theme": "The one and only", "title": "Selected Tales", "author": "Edgar Allan Poe"},
-
-"the_collected_poems_of": {"theme": "American classic", "title": "The Collected Poems of", "author": "Langston Hughes"},
-"things_i_have_to_tell_you": {"theme": "By girls", "title": "Things I Have to Tell You", "author": "Betsy Franco"},
-"you_hear_me": {"theme": "By Boys", "title": "You Hear Me?", "author": "Betsy Franco"},
-"sailing_alone_around_the_room": {"theme": "One man show", "title": "Sailing Alone Around the Room", "author": "Billy Collins"},
-"poetry_180": {"theme": "Collections", "title": "Poetry 180", "author": "Billy Collins"},
-
-"extremely_loud_and_incredibly_close": {"theme": "Family", "title": "Extremely Loud and Incredibly Close", "author": "Jonathan Safran Foer"},
-"the_curious_incident_of_the_dog_in_the_nighttime": {"theme": "Murder", "title": "The Curious Incident of the Dog in the Night-time", "author": "Mark Haddon"},
-
-"boot_camp": {"theme": "Military therapy", "title": "Boot Camp", "author": "Todd Strasser"},
-"flight": {"theme": "Teen angst", "title": "Flight", "author": "Sherman Alexie"},
-"school_shooting": {"theme": "School Shooting", "title": "Nineteen Minutes", "author": "Jodi Picoult"},
-"kite_ruuner": {"theme": "Afghan caste system", "title": "Kite Runner", "author": "Khaled Hosseini"},
-"what_is_the_what": {"theme": "Child Soldiers", "title": "What is the What", "author": "Dave Eggers"},
-
-"snow_falling_on_cedars": {"theme": "This island is not big enough...", "title": "Snow Falling on Cedars", "author": "David Guterson"},
-"dante_club": {"theme": "Poetic serial killer", "title": "Dante Club", "author": "Matthew Pearl"},
-"the_plot_against_america": {"theme": "A dark 'what if?'", "title": "The Plot Against America", "author": "Philip Roth"},
-"the_rum_diary": {"theme": "Real estate and island living", "title": "The Rum Diary", "author": "Hunter S. Thompson"},
-"half_brother": {"theme": "I want a baby brother", "title": "Half Brother", "author": "Kenneth Oppel"},
-"a_great_and_terrible_beauty": {"theme": "Tragedy strikes", "title": "A Great and Terrible Beauty", "author": "Libba Bray"},
-"the_poisonwood_bible": {"theme": "A missionary family in Africa", "title": "The Poisonwood Bible", "author": "Barbara Kingsolver"},
-"death_comes_for_the_archbishop": {"theme": "Catholicism in the Wild West", "title": "Death Comes for the Archbishop", "author": "Willa Cather"},
-"the_pillars_of_the_earth": {"theme": "The corner stone", "title": "The Pillars of the Earth", "author": "Ken Follett"},
-
-"the_blind_assassin": {"theme": "Memory of a troubled family", "title": "The Blind Assassin", "author": "Margaret Atwood"},
-"lovely_bones": {"theme": "Ghost in the room", "title": "Lovely Bones", "author": "Alice Sebold"},
-"room": {"theme": "A family in captivity", "title": "Room", "author": "Emma Donoghue"},
-
-"enders_game": {"theme": "Fighting an invasion", "title": "Ender's Game", "author": "Orson Scott Card"},
-"the_hitchkikers_guide_to_the_galaxy": {"theme": "Humorous Space Romp", "title": "The Hitchhiker's Guide to the Galaxy", "author": "Douglas Adams"},
-"unwind": {"theme": "Pro life", "title": "Unwind", "author": "Neal Shusterman"},
-"feed": {"theme": "Future Internet", "title": "Feed", "author": "M.T. Anderson"},
-"never_let_me_go": {"theme": "Harvest the clones", "title": "Never Let Me Go", "author": "Kazuo Ishiguro"},
-"the_house_of_the_scorpion": {"theme": "Drug lords and clones", "title": "The House of the Scorpion", "author": "Nancy Farmer"},
-"incarceron": {"theme": "Where do you think you're going", "title": "Incarceron", "author": "Catharine Fisher"},
-
-"american_born_chinese": {"theme": "Coming of ages as an oudsider in a new land", "title": "American Born Chinese", "author": "Luen Yang & Lark Pien"},
-"persepous": {"theme": "Growing up under an oppressive regime", "title": "Persepolis", "author": "Marjane Satrapi"},
-"maus": {"theme": "Survival and struggle", "title": "Maus", "author": "Art Spiegelman"},
-
-"the_lone_ranger_and_tonto_fistfight_in_heaven": {"theme": "Fantastical", "title": "The Lone Ranger and Tonto Fistfight in Heaven", "author": "Sherman Alexie"},
-"unaccustomed_earth": {"theme": "Family life", "title": "Unaccustomed Earth", "author": "Jhumpa Lahiri"},
-"athletic_shorts": {"theme": "Sports, on and off the field", "title": "Athletic Shorts", "author": "Chris Crutcher"},
-
-"beastly": {"theme": "Beauty and the Beast in New York", "title": "Beastly", "author": "Alex Flinn"},
-"the_art_or_racing_in_the_rain": {"theme": "Philosophical dog", "title": "The Art of Racing in the Rain", "author": "Garth Stein"},
-"gym_candy": {"theme": "Sports and drugs", "title": "Gym Candy", "author": "Carl Deuker"},
-
-"twisted": {"theme": "An underdog rises", "title": "Twisted", "author": "Laurie Halse Anderson"},
-"true_confessions_of_a_hearless_girl": {"theme": "Troubled youth", "title": "True Confessions of a Heartless Girl", "author": "Martha Brooks"},
-"just_listen": {"theme": "Relationship strife", "title": "Just Listen", "author": "Sarah Dessen"},
-"if_i_stay": {"theme": "Picking up the pieces", "title": "If I Stay", "author": "Gayle Forman"},
-"tyrell": {"theme": "Coming of age with few options", "title": "Tyrell", "author": "Coe Booth"},
-"first_part_last": {"theme": "New dad", "title": "First Part Last", "author": "Angela Johnson"},
-"november_blues": {"theme": "New mom", "title": "November Blues", "author": "Sharon M. Draper"}
-}
+    "the_great_gatsby": {"theme": "New money", "title": "The Great Gatsby", "author": "F. Scott Fitzgerald"},
+    "rebecca": {"theme": "Old money", "title": "Rebecca", "author": "Daphne du Maurier"},
+    "anna_karenina": {"theme": "Narcissism", "title": "Anna Karenina", "author": "Leo Tolstoy"},
+    "fathers_and_sons": {"theme": "Nihilism", "title": "Fathers and Sons", "author": "Ivan Turgenev"},
+    "the_taming_of_the_shrew": {"theme": "Make it a play", "title": "The Taming of the Shrew", "author": "William Shakespeare"},
+    "jane_eyre": {"theme": "Growing up rich", "title": "Jane Eyre", "author": "Charlotte Brontë"},
+    "sense_and_sensibility": {"theme": "A fall from grace", "title": "Sense and Sensibility", "author": "Jane Austen"},
+    
+    "oliver_twist": {"theme": "England", "title": "Oliver Twist", "author": "Charles Dickens"},
+    "les_miserables": {"theme": "France", "title": "Les Misérables", "author": "Victor Hugo"},
+    "color_purple": {"theme": "Post slavery", "title": "Color Purple", "author": "Alice Walker"},
+    "uncle_toms_cabin": {"theme": "Pre slavery", "title": "Uncle Tom's Cabin", "author": "Harriet Becher Stowe"},
+    "animal_farm": {"theme": "Political allegory", "title": "Animal Farm", "author": "George Orwell"},
+    
+    "of_mice_and_men": {"theme": "California", "title": "Of Mice and Men", "author": "John Steinbeck"},
+    "adventures_of_huckelberry_finn": {"theme": "The South", "title": "Adventures of Huckleberry Finn", "author": "Mark Twain"},
+    
+    "for_whom_the_bell_tolls": {"theme": "Spanish Civil War", "title": "For Whom the Bell Tolls", "author": "Ernest Hemingway"},
+    "catch_22": {"theme": "World War II", "title": "Catch 22", "author": "Joseph Heller"},
+    "heart_of_darkness": {"theme": "Pure Evil", "title": "Heart of Darkness", "author": "Joseph Conrad"},
+    "moby_dick": {"theme": "An Epic Hunt", "title": "Moby Dick", "author": "Herman Melville"},
+    "the_count_of_monte_cristo": {"theme": "Revenge", "title": "The Count of Monte Cristo", "author": "Alexandre Dumas"},
+    
+    "the_methamorphosis": {"theme": "Absurdist mutation", "title": "The Metamorphosis", "author": "Franz Kafka"},
+    "lord_of_the_rings": {"theme": "Massive epic", "title": "Lord of the Rings", "author": "J.R.R. Tolkien"},
+    "i_am_legend": {"theme": "Don't bite me bro", "title": "I am Legend", "author": "Richard Matheson"},
+    
+    "fahrenheit_451": {"theme": "Information Control", "title": "Fahrenheit 451", "author": "Ray Bradbury"},
+    "brave_new_world": {"theme": "Genetically engineered humans", "title": "Brave New World", "author": "Aldous Huxley"},
+    "1984": {"theme": "Thought police", "title": "1984", "author": "George Orwell"},
+    "slaughterhouse_five": {"theme": "Time travel", "title": "Slaughterhouse Five", "author": "Kurt Vonnegut Jr."},
+    "cats_cradle": {"theme": "End of the world", "title": "Cat's Cradle", "author": "Kurt Vonnegut Jr."},
+    
+    "the_picture_of_dorian_gray": {"theme": "An individual's plight", "title": "The Picture of Dorian Gray", "author": "Oscar Wilde"},
+    "one_hundred_years_of_solitude": {"theme": "Epic", "title": "One Hundred Years of Solitude", "author": "Gabriel García Márquez"},
+    
+    "selected_tales": {"theme": "The one and only", "title": "Selected Tales", "author": "Edgar Allan Poe"},
+    
+    "the_collected_poems_of": {"theme": "American classic", "title": "The Collected Poems of", "author": "Langston Hughes"},
+    "things_i_have_to_tell_you": {"theme": "By girls", "title": "Things I Have to Tell You", "author": "Betsy Franco"},
+    "you_hear_me": {"theme": "By Boys", "title": "You Hear Me?", "author": "Betsy Franco"},
+    "sailing_alone_around_the_room": {"theme": "One man show", "title": "Sailing Alone Around the Room", "author": "Billy Collins"},
+    "poetry_180": {"theme": "Collections", "title": "Poetry 180", "author": "Billy Collins"},
+    
+    "extremely_loud_and_incredibly_close": {"theme": "Family", "title": "Extremely Loud and Incredibly Close", "author": "Jonathan Safran Foer"},
+    "the_curious_incident_of_the_dog_in_the_nighttime": {"theme": "Murder", "title": "The Curious Incident of the Dog in the Night-time", "author": "Mark Haddon"},
+    
+    "boot_camp": {"theme": "Military therapy", "title": "Boot Camp", "author": "Todd Strasser"},
+    "flight": {"theme": "Teen angst", "title": "Flight", "author": "Sherman Alexie"},
+    "school_shooting": {"theme": "School Shooting", "title": "Nineteen Minutes", "author": "Jodi Picoult"},
+    "kite_ruuner": {"theme": "Afghan caste system", "title": "Kite Runner", "author": "Khaled Hosseini"},
+    "what_is_the_what": {"theme": "Child Soldiers", "title": "What is the What", "author": "Dave Eggers"},
+    
+    "snow_falling_on_cedars": {"theme": "This island is not big enough...", "title": "Snow Falling on Cedars", "author": "David Guterson"},
+    "dante_club": {"theme": "Poetic serial killer", "title": "Dante Club", "author": "Matthew Pearl"},
+    "the_plot_against_america": {"theme": "A dark 'what if?'", "title": "The Plot Against America", "author": "Philip Roth"},
+    "the_rum_diary": {"theme": "Real estate and island living", "title": "The Rum Diary", "author": "Hunter S. Thompson"},
+    "half_brother": {"theme": "I want a baby brother", "title": "Half Brother", "author": "Kenneth Oppel"},
+    "a_great_and_terrible_beauty": {"theme": "Tragedy strikes", "title": "A Great and Terrible Beauty", "author": "Libba Bray"},
+    "the_poisonwood_bible": {"theme": "A missionary family in Africa", "title": "The Poisonwood Bible", "author": "Barbara Kingsolver"},
+    "death_comes_for_the_archbishop": {"theme": "Catholicism in the Wild West", "title": "Death Comes for the Archbishop", "author": "Willa Cather"},
+    "the_pillars_of_the_earth": {"theme": "The corner stone", "title": "The Pillars of the Earth", "author": "Ken Follett"},
+    
+    "the_blind_assassin": {"theme": "Memory of a troubled family", "title": "The Blind Assassin", "author": "Margaret Atwood"},
+    "lovely_bones": {"theme": "Ghost in the room", "title": "Lovely Bones", "author": "Alice Sebold"},
+    "room": {"theme": "A family in captivity", "title": "Room", "author": "Emma Donoghue"},
+    
+    "enders_game": {"theme": "Fighting an invasion", "title": "Ender's Game", "author": "Orson Scott Card"},
+    "the_hitchkikers_guide_to_the_galaxy": {"theme": "Humorous Space Romp", "title": "The Hitchhiker's Guide to the Galaxy", "author": "Douglas Adams"},
+    "unwind": {"theme": "Pro life", "title": "Unwind", "author": "Neal Shusterman"},
+    "feed": {"theme": "Future Internet", "title": "Feed", "author": "M.T. Anderson"},
+    "never_let_me_go": {"theme": "Harvest the clones", "title": "Never Let Me Go", "author": "Kazuo Ishiguro"},
+    "the_house_of_the_scorpion": {"theme": "Drug lords and clones", "title": "The House of the Scorpion", "author": "Nancy Farmer"},
+    "incarceron": {"theme": "Where do you think you're going", "title": "Incarceron", "author": "Catharine Fisher"},
+    
+    "american_born_chinese": {"theme": "Coming of ages as an oudsider in a new land", "title": "American Born Chinese", "author": "Luen Yang & Lark Pien"},
+    "persepous": {"theme": "Growing up under an oppressive regime", "title": "Persepolis", "author": "Marjane Satrapi"},
+    "maus": {"theme": "Survival and struggle", "title": "Maus", "author": "Art Spiegelman"},
+    
+    "the_lone_ranger_and_tonto_fistfight_in_heaven": {"theme": "Fantastical", "title": "The Lone Ranger and Tonto Fistfight in Heaven", "author": "Sherman Alexie"},
+    "unaccustomed_earth": {"theme": "Family life", "title": "Unaccustomed Earth", "author": "Jhumpa Lahiri"},
+    "athletic_shorts": {"theme": "Sports, on and off the field", "title": "Athletic Shorts", "author": "Chris Crutcher"},
+    
+    "beastly": {"theme": "Beauty and the Beast in New York", "title": "Beastly", "author": "Alex Flinn"},
+    "the_art_or_racing_in_the_rain": {"theme": "Philosophical dog", "title": "The Art of Racing in the Rain", "author": "Garth Stein"},
+    "gym_candy": {"theme": "Sports and drugs", "title": "Gym Candy", "author": "Carl Deuker"},
+    
+    "twisted": {"theme": "An underdog rises", "title": "Twisted", "author": "Laurie Halse Anderson"},
+    "true_confessions_of_a_hearless_girl": {"theme": "Troubled youth", "title": "True Confessions of a Heartless Girl", "author": "Martha Brooks"},
+    "just_listen": {"theme": "Relationship strife", "title": "Just Listen", "author": "Sarah Dessen"},
+    "if_i_stay": {"theme": "Picking up the pieces", "title": "If I Stay", "author": "Gayle Forman"},
+    "tyrell": {"theme": "Coming of age with few options", "title": "Tyrell", "author": "Coe Booth"},
+    "first_part_last": {"theme": "New dad", "title": "First Part Last", "author": "Angela Johnson"},
+    "november_blues": {"theme": "New mom", "title": "November Blues", "author": "Sharon M. Draper"}
+    }
