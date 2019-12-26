@@ -8,9 +8,9 @@ import java.awt.event.ActionListener;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JDialog;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JWindow;
 import javax.swing.border.EmptyBorder;
 
 public class GreetingsWindow {
@@ -30,10 +30,11 @@ public class GreetingsWindow {
 	 */
 	private static Point windowLocation;
 
-	public GreetingsWindow(JFrame parent, String title, String[] authors, String[] remainingText) {
+	public GreetingsWindow(String title, String[] authors, String[] remainingText) {
 		// Configure the window
-		frame = new JDialog(parent, title);
-		frame.setModal(true);
+		frame = new JDialog((JWindow)null, title);
+//		frame.setModal(true);
+		frame.setModalityType(JDialog.ModalityType.TOOLKIT_MODAL);
 		frame.setSize(500, 500);
 		if (windowLocation != null) {
 			frame.setLocation(windowLocation);

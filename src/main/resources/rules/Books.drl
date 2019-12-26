@@ -9,11 +9,10 @@ rule "Init"
     when
     then
     	GreetingsWindow window;
-    	JFrame mainFrame = new JFrame();
     	String title = "Summer Reading Book Recommendation";
     	String[] authors = {"Szymon Michalak", "Piotr Tomaszewski"};
     	String[] remainingText = {"For Artificial Intelligence course at PUT", "Based on a flowchart by teach.com"};
-    	window = new GreetingsWindow(mainFrame, title, authors, remainingText);
+    	window = new GreetingsWindow(title, authors, remainingText);
 		insert (new Answer("user_greeted", "yes"));
 end
 
@@ -22,10 +21,9 @@ rule "Classic Fiction"
 		Answer(question == "user_greeted", answer == "yes");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "cla_fic";
 		String[] answer = {"yes", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end		
 
@@ -34,10 +32,9 @@ rule "High society"
 		Answer(question == "cla_fic", answer == "yes");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "hig_soc";
 		String[] answer = {"rel_int", "rus_lit", "im_an_ang", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));		
 end
 
@@ -46,10 +43,9 @@ rule "Social issues"
 		Answer(question == "hig_soc", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "soc_iss";
 		String[] answer = {"do_you_hav_any_clas", "rac_in_ame", "pol_all", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -58,10 +54,9 @@ rule "Adventure time"
 		Answer(question == "soc_iss", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "adv_tim";
 		String[] answer = {"let_pla_war", "loo_for_som", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -70,10 +65,9 @@ rule "Americana"
 		Answer(question == "adv_tim", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "ame";
 		String[] answer = {"cal", "the_sou", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -82,10 +76,9 @@ rule "Fantasy"
 		Answer(question == "ame", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "fan";
 		String[] answer = {"abs_mut", "mas_epi", "don_bit_me_bro", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -94,10 +87,9 @@ rule "Classic si-fi"
 		Answer(question == "fan", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "cla_sif";
 		String[] answer = {"i_can_wai_for_the_fut", "tim_tra", "end_of_the_wor", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -106,10 +98,9 @@ rule "Magic realism"
 		Answer(question == "cla_sif", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "mag_rea";
 		String[] answer = {"an_ind_pli", "epi", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -118,10 +109,9 @@ rule "Short stories?"
 		Answer(question == "mag_rea", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "sho_sto";
 		String[] answer = {"the_one_and_onl", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -130,10 +120,9 @@ rule "Poetry"
 		Answer(question == "sho_sto", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "poe";
 		String[] answer = {"con", "wor_of_the_you", "ame_cla"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -142,10 +131,9 @@ rule "Historical fiction"
 		Answer(question == "cla_fic", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "his_fic";
 		String[] answer = {"fou_pla", "the_pol_sce", "fam_tie", "god_ble_rel", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -154,10 +142,9 @@ rule "That's mysterious"
 		Answer(question == "his_fic", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "tha_mys";
 		String[] answer = {"fam", "mur", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -166,10 +153,9 @@ rule "Violent youth"
 		Answer(question == "tha_mys", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "vio_you";
 		String[] answer = {"mil_the", "tee_ang", "sch_sho", "afg_cas_sys", "chi_sol", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -178,10 +164,9 @@ rule "Dark fiction"
 		Answer(question == "vio_you", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "dar_fic";
 		String[] answer = {"mem_of_a_tro_fam", "gho_in_the_roo", "a_fam_in_cap", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -190,10 +175,9 @@ rule "Science fiction"
 		Answer(question == "dar_fic", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "sci_fic";
 		String[] answer = {"ali", "dar_fut", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -202,10 +186,9 @@ rule "Can i have drawings"
 		Answer(question == "sci_fic", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "can_i_hav_dra_wit_my_wor";
 		String[] answer = {"com_of_age_as_an_out_in_a_new_lan", "gro_up_und_an_opp_reg", "sur_and_str", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -214,10 +197,9 @@ rule "Short stories without drawings"
 		Answer(question == "can_i_hav_dra_wit_my_wor", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "sho_sto_wo_dra";
 		String[] answer = {"fan_sho", "fam_lif", "spo_on_and_off_the_fie", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -226,10 +208,9 @@ rule "Something different"
 		Answer(question == "sho_sto_wo_dra", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "som_dif";
 		String[] answer = {"bea_and_the_bea_in_new_yor", "phi_dog", "spo_and_dru", "no"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -238,10 +219,9 @@ rule "The kids are alright"
 		Answer(question == "som_dif", answer == "no");
 	then
 		QuestionAndAnswerWindow window;
-		JFrame mainFrame = new JFrame();
 		String question = "the_kid_are_alr";
 		String[] answer = {"tra", "tou_sit"};
-		window = new QuestionAndAnswerWindow(mainFrame, question, answer);
+		window = new QuestionAndAnswerWindow(question, answer);
 		insert (new Answer(question, window.getSelectedOption()));
 end
 
@@ -253,9 +233,8 @@ rule "Relationship Intrigue"
 		Answer(question == "hig_soc", answer == "rel_int");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"the_great_gatsby", "rebecca"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Russian Lit"
@@ -263,9 +242,8 @@ rule "Russian Lit"
 		Answer(question == "hig_soc", answer == "rus_lit");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"anna_karenina", "fathers_and_sons"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "I am an anglophile."
@@ -273,9 +251,8 @@ rule "I am an anglophile."
 		Answer(question == "hig_soc", answer == "im_an_ang");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"the_taming_of_the_shrew", "jane_eyre", "sense_and_sensibility"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Do you have any class?"
@@ -283,9 +260,8 @@ rule "Do you have any class?"
 		Answer(question == "soc_iss", answer == "do_you_hav_any_clas");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"oliver_twist", "les_miserables"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Race in America?"
@@ -293,9 +269,8 @@ rule "Race in America?"
 		Answer(question == "soc_iss", answer == "rac_in_ame");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"color_purple", "uncle_toms_cabin"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Political allegory"
@@ -303,9 +278,8 @@ rule "Political allegory"
 		Answer(question == "soc_iss", answer == "pol_all");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"animal_farm"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "California"
@@ -313,9 +287,8 @@ rule "California"
 		Answer(question == "ame", answer == "cal");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"of_mice_and_men"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "The south"
@@ -323,9 +296,8 @@ rule "The south"
 		Answer(question == "ame", answer == "the_sou");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"adventures_of_huckelberry_finn"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Lets play war"
@@ -333,9 +305,8 @@ rule "Lets play war"
 		Answer(question == "adv_tim", answer == "let_pla_war");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"for_whom_the_bell_tolls", "catch_22"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Looking for something?"
@@ -343,9 +314,8 @@ rule "Looking for something?"
 		Answer(question == "adv_tim", answer == "loo_for_som");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"heart_of_darkness", "moby_dick", "the_count_of_monte_cristo"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Absurdist mutation"
@@ -353,9 +323,8 @@ rule "Absurdist mutation"
 		Answer(question == "fan", answer == "abs_mut");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"the_methamorphosis"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Massive epic"
@@ -363,9 +332,8 @@ rule "Massive epic"
 		Answer(question == "fan", answer == "mas_epi");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"lord_of_the_rings"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Dont bite me bro"
@@ -373,9 +341,8 @@ rule "Dont bite me bro"
 		Answer(question == "fan", answer == "don_bit_me_bro");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"i_am_legend"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "I cant wait for the future"
@@ -383,9 +350,8 @@ rule "I cant wait for the future"
 		Answer(question == "cla_sif", answer == "i_can_wai_for_the_fut");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"fahrenheit_451", "brave_new_world", "1984"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Time travel"
@@ -393,9 +359,8 @@ rule "Time travel"
 		Answer(question == "cla_sif", answer == "tim_tra");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"slaughterhouse_five"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "End of the world"
@@ -403,9 +368,8 @@ rule "End of the world"
 		Answer(question == "cla_sif", answer == "end_of_the_wor");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"cats_cradle"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "An individuals plight"
@@ -413,9 +377,8 @@ rule "An individuals plight"
 		Answer(question == "mag_rea", answer == "an_ind_pli");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"the_picture_of_dorian_gray"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Epic"
@@ -423,9 +386,8 @@ rule "Epic"
 		Answer(question == "mag_rea", answer == "epi");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"one_hundred_years_of_solitude"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "The one and only"
@@ -433,9 +395,8 @@ rule "The one and only"
 		Answer(question == "sho_sto", answer == "the_one_and_onl");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"selected_tales"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Contemporary"
@@ -443,9 +404,8 @@ rule "Contemporary"
 		Answer(question == "poe", answer == "con");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"poetry_180", "sailing_alone_around_the_room"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Words of the young"
@@ -453,9 +413,8 @@ rule "Words of the young"
 		Answer(question == "poe", answer == "wor_of_the_you");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"you_hear_me", "things_i_have_to_tell_you"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "American classic"
@@ -463,9 +422,8 @@ rule "American classic"
 		Answer(question == "poe", answer == "ame_cla");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"the_collected_poems_of"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 //contemporary fiction
@@ -474,9 +432,8 @@ rule "Family"
 		Answer(question == "tha_mys", answer == "fam");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"extremely_loud_and_incredibly_close"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Murder"
@@ -484,9 +441,8 @@ rule "Murder"
 		Answer(question == "tha_mys", answer == "mur");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"the_curious_incident_of_the_dog_in_the_nighttime"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Military therapy"
@@ -494,9 +450,8 @@ rule "Military therapy"
 		Answer(question == "vio_you", answer == "mil_the");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"boot_camp"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Teen angst"
@@ -504,9 +459,8 @@ rule "Teen angst"
 		Answer(question == "vio_you", answer == "tee_ang");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"flight"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "School shooting"
@@ -514,9 +468,8 @@ rule "School shooting"
 		Answer(question == "vio_you", answer == "sch_sho");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"school_shooting"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Afghan caste system"
@@ -524,9 +477,8 @@ rule "Afghan caste system"
 		Answer(question == "vio_you", answer == "afg_cas_sys");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"kite_ruuner"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Child soliders"
@@ -534,9 +486,8 @@ rule "Child soliders"
 		Answer(question == "vio_you", answer == "chi_sol");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"what_is_the_what"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Foul play"
@@ -544,9 +495,8 @@ rule "Foul play"
 		Answer(question == "his_fic", answer == "fou_pla");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"snow_falling_on_cedars", "dante_club"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "The political scene"
@@ -554,9 +504,8 @@ rule "The political scene"
 		Answer(question == "his_fic", answer == "the_pol_sce");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"the_plot_against_america", "the_rum_diary"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Family ties"
@@ -564,9 +513,8 @@ rule "Family ties"
 		Answer(question == "his_fic", answer == "fam_tie");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"half_brother", "a_great_and_terrible_beauty"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "God bless religion"
@@ -574,9 +522,8 @@ rule "God bless religion"
 		Answer(question == "his_fic", answer == "god_ble_rel");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"the_poisonwood_bible", "death_comes_for_the_archbishop", "the_pillars_of_the_earth"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Memory of troubled family"
@@ -584,9 +531,8 @@ rule "Memory of troubled family"
 		Answer(question == "dar_fic", answer == "mem_of_a_tro_fam");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"the_blind_assassin"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Ghost in the room"
@@ -594,9 +540,8 @@ rule "Ghost in the room"
 		Answer(question == "dar_fic", answer == "gho_in_the_roo");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"lovely_bones"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "A family in captivity"
@@ -604,9 +549,8 @@ rule "A family in captivity"
 		Answer(question == "dar_fic", answer == "a_fam_in_cap");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"room"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Aliens"
@@ -614,9 +558,8 @@ rule "Aliens"
 		Answer(question == "sci_fic", answer == "ali");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"enders_game", "the_hitchkikers_guide_to_the_galaxy"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Dark futures"
@@ -624,9 +567,8 @@ rule "Dark futures"
 		Answer(question == "sci_fic", answer == "dar_fut");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"unwind", "feed", "never_let_me_go", "the_house_of_the_scorpion", "incarceron"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Coming of age as an oudsider in a new land"
@@ -634,9 +576,8 @@ rule "Coming of age as an oudsider in a new land"
 		Answer(question == "can_i_hav_dra_wit_my_wor", answer == "com_of_age_as_an_out_in_a_new_lan");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"american_born_chinese"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Growing un under an oppressive regime"
@@ -644,9 +585,8 @@ rule "Growing un under an oppressive regime"
 		Answer(question == "can_i_hav_dra_wit_my_wor", answer == "gro_up_und_an_opp_reg");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"persepous"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Survival and struggle"
@@ -654,9 +594,8 @@ rule "Survival and struggle"
 		Answer(question == "can_i_hav_dra_wit_my_wor", answer == "sur_and_str");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"maus"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Fantasical"
@@ -664,9 +603,8 @@ rule "Fantasical"
 		Answer(question == "sho_sto_wo_dra", answer == "fan_sho");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"the_lone_ranger_and_tonto_fistfight_in_heaven"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Family life"
@@ -674,9 +612,8 @@ rule "Family life"
 		Answer(question == "sho_sto_wo_dra", answer == "fam_lif");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"unaccustomed_earth"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Sports, on and off the field"
@@ -684,9 +621,8 @@ rule "Sports, on and off the field"
 		Answer(question == "sho_sto_wo_dra", answer == "spo_on_and_off_the_fie");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"athletic_shorts"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Beauty and beast in NY"
@@ -694,9 +630,8 @@ rule "Beauty and beast in NY"
 		Answer(question == "som_dif", answer == "bea_and_the_bea_in_new_yor");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"beastly"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Philosophical dog"
@@ -704,9 +639,8 @@ rule "Philosophical dog"
 		Answer(question == "som_dif", answer == "phi_dog");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"the_art_or_racing_in_the_rain"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Sports and drugs"
@@ -714,9 +648,8 @@ rule "Sports and drugs"
 		Answer(question == "som_dif", answer == "spo_and_dru");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"gym_candy"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Transformations"
@@ -724,9 +657,8 @@ rule "Transformations"
 		Answer(question == "the_kid_are_alr", answer == "tra");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"twisted", "true_confessions_of_a_hearless_girl", "just_listen"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end
 
 rule "Tough situation"
@@ -734,7 +666,6 @@ rule "Tough situation"
 		Answer(question == "the_kid_are_alr", answer == "tou_sit");
 	then
 		BookInfoWindow window;
-		JFrame mainFrame = new JFrame();
 		String[] books = {"if_i_stay", "tyrell", "first_part_last", "november_blues"};
-		window = new BookInfoWindow(mainFrame, books);
+		window = new BookInfoWindow(books);
 end

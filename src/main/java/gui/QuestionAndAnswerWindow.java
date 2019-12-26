@@ -3,6 +3,7 @@ package gui;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JWindow;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.ButtonGroup;
@@ -64,10 +65,10 @@ public class QuestionAndAnswerWindow {
 	 * @param question A question to ask the user.
 	 * @param answers  An array of all possible answers.
 	 */
-	public QuestionAndAnswerWindow(JFrame parent, String question, String[] answers) {
+	public QuestionAndAnswerWindow(String question, String[] answers) {
 		// Configure the window
-		frame = new JDialog(parent, question);
-		frame.setModal(true);
+		frame = new JDialog((JWindow)null, (String)shortNameDict.get(question));
+		frame.setModalityType(JDialog.ModalityType.TOOLKIT_MODAL);
 		frame.setSize(500, 500);
 		if (windowLocation != null) {
 			frame.setLocation(windowLocation);

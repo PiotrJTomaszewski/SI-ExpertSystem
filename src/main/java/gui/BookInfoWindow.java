@@ -12,6 +12,7 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JWindow;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
@@ -44,7 +45,7 @@ public class BookInfoWindow {
 	 */
 	private static Point windowLocation;
 
-	public BookInfoWindow(JFrame parent, String[] booksShort) {
+	public BookInfoWindow(String[] booksShort) {
 		int booksNumber = booksShort.length;
 		// Configure the window
 		String windowTitle;
@@ -53,8 +54,8 @@ public class BookInfoWindow {
 		} else {
 			windowTitle = "Books recommended for you:";
 		}
-		frame = new JDialog(parent, windowTitle);
-		frame.setModal(true);
+		frame = new JDialog((JWindow)null, windowTitle);
+		frame.setModalityType(JDialog.ModalityType.TOOLKIT_MODAL);
 		frame.setSize(500, 500);
 		if (windowLocation != null) {
 			frame.setLocation(windowLocation);
